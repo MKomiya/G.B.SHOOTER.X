@@ -210,6 +210,7 @@
 		D0064BDC16AFDA660053F56F /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0064BBB16AFD5000053F56F /* HelloWorldScene.cpp */; };
 		D0064BDD16AFDA6A0053F56F /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0064BD016AFD8F40053F56F /* AppDelegate.cpp */; };
 		D0064BDE16AFDA6C0053F56F /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0064BAA16AFD45A0053F56F /* TitleScene.cpp */; };
+		D0064E0816B004760053F56F /* game1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D0064E0716B004760053F56F /* game1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1115,6 +1116,7 @@
 		D0064DFC16AFE14A0053F56F /* Cocos2dxSound.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Cocos2dxSound.java; sourceTree = "<group>"; };
 		D0064DFD16AFE14A0053F56F /* Cocos2dxTextInputWraper.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Cocos2dxTextInputWraper.java; sourceTree = "<group>"; };
 		D0064DFE16AFE14A0053F56F /* Cocos2dxTypefaces.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Cocos2dxTypefaces.java; sourceTree = "<group>"; };
+		D0064E0716B004760053F56F /* game1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = game1.mp3; path = Resources/game1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1192,6 +1194,7 @@
 				D0064BAD16AFD4BB0053F56F /* bigbullet.png */,
 				D0064BAE16AFD4BB0053F56F /* effect.png */,
 				D0064BAF16AFD4BB0053F56F /* bullet.png */,
+				D0064E0716B004760053F56F /* game1.mp3 */,
 				D0064BB016AFD4BB0053F56F /* enemy.png */,
 				D0064BB116AFD4BB0053F56F /* player.png */,
 				D0064BB216AFD4BB0053F56F /* title.png */,
@@ -3193,6 +3196,7 @@
 				D0064BB616AFD4BB0053F56F /* enemy.png in Resources */,
 				D0064BB716AFD4BB0053F56F /* player.png in Resources */,
 				D0064BB816AFD4BB0053F56F /* title.png in Resources */,
+				D0064E0816B004760053F56F /* game1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

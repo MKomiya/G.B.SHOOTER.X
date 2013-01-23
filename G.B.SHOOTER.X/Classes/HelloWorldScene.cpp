@@ -251,6 +251,9 @@ bool HelloWorld::init()
     targetArray->retain();
     bulletArray->retain();
     
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("game1.mp3");
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game1.mp3", true);
+    
     return true;
 }
 
@@ -306,6 +309,9 @@ void HelloWorld::ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent)
 
 void HelloWorld::goNextScene()
 {
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->end();
+    
     CCUserDefault::sharedUserDefault()->setIntegerForKey("score", score);
     CCDirector::sharedDirector()->replaceScene(ResultScene::scene());
 }
