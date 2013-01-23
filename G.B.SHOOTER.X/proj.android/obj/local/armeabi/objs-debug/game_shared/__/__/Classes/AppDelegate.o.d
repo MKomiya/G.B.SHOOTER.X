@@ -214,6 +214,8 @@ obj/local/armeabi/objs-debug/game_shared/__/__/Classes/AppDelegate.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCDrawingPrimitives.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCScheduler.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/data_support/uthash.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/CocosDenshion/android/../include/SimpleAudioEngine.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/CocosDenshion/android/../include/Export.h \
  jni/../../Classes/HelloWorldScene.h jni/../../Classes/TitleScene.h
 
 jni/../../Classes/AppDelegate.h:
@@ -645,6 +647,10 @@ jni/../../Classes/AppDelegate.h:
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCScheduler.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/data_support/uthash.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/CocosDenshion/android/../include/SimpleAudioEngine.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/CocosDenshion/android/../include/Export.h:
 
 jni/../../Classes/HelloWorldScene.h:
 

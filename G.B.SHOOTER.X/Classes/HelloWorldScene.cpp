@@ -146,6 +146,7 @@ void HelloWorld::collision(float dt)
                                            target->getContentSize().height);
             if(targetRect.intersectsRect(bulletRect))
             {
+                CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("destroy.wav");
                 score += 100;
                 addEffect(target->getPosition());
                 targetArray->removeObject(target, false);
@@ -254,6 +255,8 @@ bool HelloWorld::init()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("game1.mp3");
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game1.mp3", true);
     
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("destroy.mp3");
+    
     return true;
 }
 
@@ -309,6 +312,7 @@ void HelloWorld::ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent)
 
 void HelloWorld::goNextScene()
 {
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->unloadEffect("destroy.wav");
     CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
     CocosDenshion::SimpleAudioEngine::sharedEngine()->end();
     
