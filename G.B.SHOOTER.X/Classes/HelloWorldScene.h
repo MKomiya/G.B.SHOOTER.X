@@ -17,6 +17,35 @@ public:
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(HelloWorld);
+    
+    virtual bool ccTouchBegan(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
+    virtual void ccTouchMoved(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
+    virtual void ccTouchEnded(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
+    
+    void addTarget();
+    void spriteMoveFinished(CCNode* sender);
+    void gameLogic(float dt);
+    
+    void addBullet();
+    void playerLogic(float dt);
+    
+    void addEffect(cocos2d::CCPoint startpoint);
+    
+    void collision(float dt);
+    void buttonCallback(CCNode* pSender);
+    
+    void goNextScene();
+    
+private:
+    cocos2d::CCSprite* player;
+    cocos2d::CCPoint prevPoint;
+    bool isShooting, isCharging;
+    cocos2d::CCArray* targetArray;
+    cocos2d::CCArray* bulletArray;
+    int score, gameTimer;
+    cocos2d::CCLabelTTF* scoreLabel, *timerLabel;
+    
+    void _initScore();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

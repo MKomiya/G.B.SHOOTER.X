@@ -1,8 +1,8 @@
 //
-//  G_B_SHOOTER_XAppDelegate.h
-//  G.B.SHOOTER.X
+//  MyProjectAppDelegate.h
+//  MyProject
 //
-//  Created by S_Wyvern on 2013/01/23.
+//  Created by S_Wyvern on 2013/01/20.
 //  Copyright __MyCompanyName__ 2013年. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 
 The reason to implement with private inheritance is to hide some interface details of CCDirector.
 */
-class  AppDelegate : private cocos2d::CCApplication
+class AppDelegate : private cocos2d::CCApplication
 {
 public:
     AppDelegate();

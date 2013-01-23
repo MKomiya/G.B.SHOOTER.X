@@ -1,8 +1,8 @@
 //
-//  G_B_SHOOTER_XAppDelegate.cpp
-//  G.B.SHOOTER.X
+//  MyProjectAppDelegate.cpp
+//  MyProject
 //
-//  Created by S_Wyvern on 2013/01/23.
+//  Created by S_Wyvern on 2013/01/20.
 //  Copyright __MyCompanyName__ 2013年. All rights reserved.
 //
 
@@ -10,8 +10,10 @@
 
 #include "cocos2d.h"
 #include "HelloWorldScene.h"
+#include "TitleScene.h"
 
 USING_NS_CC;
+using namespace cocos2d;
 
 AppDelegate::AppDelegate()
 {
@@ -27,6 +29,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
+    CCEGLView::sharedOpenGLView()->setDesignResolutionSize(480, 320, kResolutionShowAll);
 
     // turn on display FPS
     pDirector->setDisplayStats(true);
@@ -35,7 +38,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     pDirector->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    CCScene *pScene = HelloWorld::scene();
+    //CCScene *pScene = HelloWorld::scene();
+    CCScene *pScene = TitleScene::scene();
 
     // run
     pDirector->runWithScene(pScene);
