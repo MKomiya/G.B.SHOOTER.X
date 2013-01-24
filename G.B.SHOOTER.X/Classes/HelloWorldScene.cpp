@@ -7,16 +7,12 @@ using namespace CocosDenshion;
 
 CCScene* HelloWorld::scene()
 {
-    // 'scene' is an autorelease object
     CCScene *scene = CCScene::create();
     
-    // 'layer' is an autorelease object
     HelloWorld *layer = HelloWorld::create();
 
-    // add layer as a child to scene
     scene->addChild(layer);
 
-    // return the scene
     return scene;
 }
 
@@ -178,11 +174,8 @@ void HelloWorld::_initScore()
     this->addChild(timerLabel, 1);
 }
 
-// on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-    //////////////////////////////
-    // 1. super init first
     if ( !CCLayer::init() )
     {
         return false;
@@ -193,12 +186,11 @@ bool HelloWorld::init()
     this->setTouchMode(kCCTouchesOneByOne);
     prevPoint.setPoint(0.0f, 0.0f);
 
-    CCMenuItemFont *chargeItem = CCMenuItemFont::create("charge",
+    CCMenuItemFont *chargeItem = CCMenuItemFont::create("power shot",
                                                         this,
                                                         menu_selector(HelloWorld::buttonCallback));
     chargeItem->setPosition( ccp(chargeItem->getContentSize().width/2, chargeItem->getContentSize().height/2) );
 
-    // create menu, it's an autorelease object
     CCMenu* pMenu = CCMenu::create(chargeItem, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
@@ -206,13 +198,8 @@ bool HelloWorld::init()
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     this->_initScore();
 
-    // add "HelloWorld" splash screen"
     player = CCSprite::create("player.png");
-
-    // position the sprite on the center of the screen
     player->setPosition( ccp(size.width/2, size.height/2) );
-
-    // add the sprite as a child to this layer
     this->addChild(player, 0);
     
     this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
