@@ -243,10 +243,15 @@ bool HelloWorld::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent)
 
 void HelloWorld::ccTouchMoved(CCTouch* pTouch, CCEvent* pEvent)
 {
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     CCPoint mover;
     CCPoint point = pTouch->getLocation();
     float moveX = player->getPositionX() + point.x - prevPoint.x;
     float moveY = player->getPositionY() + point.y - prevPoint.y;
+    
+    moveX = MAX(player->getContentSize().width/2, MIN(winSize.width-player->getContentSize().width/2, moveX));
+    moveY = MAX(player->getContentSize().height/2, MIN(winSize.height-player->getContentSize().height/2, moveY));
+    
     mover.setPoint(moveX, moveY);
     player->setPosition(mover);
     prevPoint = point;
