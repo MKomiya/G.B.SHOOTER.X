@@ -27,13 +27,17 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching()
 {
+    // preload SimpleAudioEngine
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("game1.mp3");
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("destroy.mp3");
+    
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
     CCEGLView::sharedOpenGLView()->setDesignResolutionSize(480, 320, kResolutionShowAll);
 
     // turn on display FPS
-    pDirector->setDisplayStats(true);
+    pDirector->setDisplayStats(false);
 
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);

@@ -193,44 +193,16 @@ bool HelloWorld::init()
     this->setTouchMode(kCCTouchesOneByOne);
     prevPoint.setPoint(0.0f, 0.0f);
 
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
-    CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
-                                        "CloseNormal.png",
-                                        "CloseSelected.png",
-                                        this,
-                                        menu_selector(HelloWorld::menuCloseCallback) );
     CCMenuItemFont *chargeItem = CCMenuItemFont::create("charge",
                                                         this,
                                                         menu_selector(HelloWorld::buttonCallback));
-    pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
-    chargeItem->setPosition( ccp(chargeItem->getContentSize().width/2 + 64, chargeItem->getContentSize().height/2) );
+    chargeItem->setPosition( ccp(chargeItem->getContentSize().width/2, chargeItem->getContentSize().height/2) );
 
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, chargeItem, NULL);
+    CCMenu* pMenu = CCMenu::create(chargeItem, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
-    /*
-    CCLabelTTF* pLabel = CCLabelTTF::create("Score:", "Thonburi", 24);
-
-    // ask director the window size
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
-
-    // position the label on the center of the screen
-    pLabel->setPosition( ccp(pLabel->getContentSize().width, size.height - 16) );
-    
-    // add the label as a child to this layer
-    this->addChild(pLabel, 1);
-    */
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     this->_initScore();
 
@@ -252,21 +224,9 @@ bool HelloWorld::init()
     targetArray->retain();
     bulletArray->retain();
     
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic("game1.mp3");
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game1.mp3", true);
     
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("destroy.mp3");
-    
     return true;
-}
-
-void HelloWorld::menuCloseCallback(CCObject* pSender)
-{
-    CCDirector::sharedDirector()->end();
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
 }
 
 void HelloWorld::buttonCallback(CCNode* pSender)
