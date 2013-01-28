@@ -145,6 +145,11 @@ void HelloWorld::collision(float dt)
                 CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("destroy.wav");
                 score += 100;
                 addEffect(target->getPosition());
+                CCParticleSystemQuad* particle = CCParticleSystemQuad::create("BurstParticle.plist");
+                particle->setPosition(target->getPosition());
+                particle->setAutoRemoveOnFinish(true);
+                this->addChild(particle);
+                
                 targetArray->removeObject(target, false);
                 this->removeChild(target, true);
                 if(bullet->getTag() == 2)
@@ -181,21 +186,21 @@ bool HelloWorld::init()
         return false;
     }
     
+    CCSize size = CCDirector::sharedDirector()->getWinSize();
     this->isShooting = false;
     this->setTouchEnabled(true);
     this->setTouchMode(kCCTouchesOneByOne);
     prevPoint.setPoint(0.0f, 0.0f);
 
-    CCMenuItemFont *chargeItem = CCMenuItemFont::create("power shot",
-                                                        this,
-                                                        menu_selector(HelloWorld::buttonCallback));
-    chargeItem->setPosition( ccp(chargeItem->getContentSize().width/2, chargeItem->getContentSize().height/2) );
+    CCLabelBMFont* pBMFont = CCLabelBMFont::create("power shot", "TextImageFont.fnt");
+    pBMFont->setScale(0.5f);
+    CCMenuItemLabel* chargeItem = CCMenuItemLabel::create(pBMFont, this, menu_selector(HelloWorld::buttonCallback));
+    chargeItem->setPosition(ccp(size.width, pBMFont->getContentSize().height/2));
 
     CCMenu* pMenu = CCMenu::create(chargeItem, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
     this->_initScore();
 
     player = CCSprite::create("player.png");

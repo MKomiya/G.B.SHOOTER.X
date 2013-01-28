@@ -34,11 +34,11 @@ bool TitleScene::init()
     pSprite->setPosition(ccp(winSize.width/2, winSize.height/2));
     this->addChild(pSprite);
     
-    CCMenuItemFont* pFontItem = CCMenuItemFont::create("Start",
-                                                       this,
-                                                       menu_selector(TitleScene::goNextScene));
-    pFontItem->setPosition(ccp(winSize.width/2, 40));
-    CCMenu* pMenu = CCMenu::create(pFontItem, NULL);
+    CCLabelBMFont* pLabel = CCLabelBMFont::create("Start", "TextImageFont.fnt", 32);
+    CCMenuItemLabel* pLabelItem = CCMenuItemLabel::create(pLabel, this, menu_selector(TitleScene::goNextScene));
+    pLabelItem->setPosition(ccp(winSize.width/2, 40));
+    
+    CCMenu* pMenu = CCMenu::create(pLabelItem, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu);
     

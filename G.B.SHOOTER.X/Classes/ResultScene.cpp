@@ -33,8 +33,9 @@ bool ResultScene::init()
     this->setTouchMode(kCCTouchesOneByOne);
     int resultScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("score");
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    CCString* string = CCString::createWithFormat("最終スコア:%d", resultScore);
-    CCLabelTTF* pLabel = CCLabelTTF::create(string->getCString(), "Thunbori", 24);
+    CCString* string = CCString::createWithFormat("ResultScore:%d", resultScore);
+    CCLabelBMFont* pLabel = CCLabelBMFont::create(string->getCString(), "TextImageFont.fnt");
+    pLabel->setScale(0.6f);
     pLabel->setPosition(ccp(winSize.width/2, winSize.height/2));
     this->addChild(pLabel);
     
