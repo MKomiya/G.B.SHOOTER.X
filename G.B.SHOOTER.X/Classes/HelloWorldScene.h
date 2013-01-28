@@ -10,7 +10,7 @@ public:
     virtual bool init();
 
     // CCSceneインスタンスを外部へ渡す
-    static cocos2d::CCScene* scene();
+    static cocos2d::CCScene* scene(bool endlessmode=false);
 
     // create関数のマクロ
     CREATE_FUNC(HelloWorld);
@@ -38,7 +38,7 @@ public:
 private:
     cocos2d::CCSprite* player;
     cocos2d::CCPoint prevPoint;
-    bool isShooting, isCharging;
+    bool isShooting, isCharging, isEndless;
     cocos2d::CCArray* targetArray;
     cocos2d::CCArray* bulletArray;
     int score, gameTimer;

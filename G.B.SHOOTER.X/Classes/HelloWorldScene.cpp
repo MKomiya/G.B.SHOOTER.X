@@ -5,11 +5,12 @@
 using namespace cocos2d;
 using namespace CocosDenshion;
 
-CCScene* HelloWorld::scene()
+CCScene* HelloWorld::scene(bool endressmode)
 {
     CCScene *scene = CCScene::create();
     
     HelloWorld *layer = HelloWorld::create();
+    layer->isEndless = endressmode;
 
     scene->addChild(layer);
 
@@ -18,9 +19,17 @@ CCScene* HelloWorld::scene()
 
 void HelloWorld::gameLogic(float dt)
 {
-    if(gameTimer > 0) gameTimer -= 1;
-    CCString* str = CCString::createWithFormat("残り時間：%d", gameTimer);
-    timerLabel->setString(str->getCString());
+    if(!isEndless)
+    {
+        if(gameTimer > 0) gameTimer -= 1;
+        CCString* str = CCString::createWithFormat("残り時間：%d", gameTimer);
+        timerLabel->setString(str->getCString());
+    }
+    else
+    {
+        CCString* str = CCString::create("残り時間：∞");
+        timerLabel->setString(str->getCString());
+    }
     
     this->addTarget();
     
@@ -165,7 +174,11 @@ void HelloWorld::collision(float dt)
 void HelloWorld::_initScore()
 {
     this->score = 0;
-    this->gameTimer = 60;
+    this->gameTimer = -1;
+    if(isEndless == false)
+    {
+        this->gameTimer = 60;
+    }
     CCString* str = CCString::createWithFormat("Score:%d", score);
     CCString* timeStr = CCString::createWithFormat("残り時間：%d", gameTimer);
     

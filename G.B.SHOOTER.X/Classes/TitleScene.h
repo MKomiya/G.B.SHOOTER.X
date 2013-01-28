@@ -20,6 +20,7 @@ public:
     CREATE_FUNC(TitleScene);
     
     void goNextScene();
+    void goNextEndlessModeScene();
 };
 
 #endif
