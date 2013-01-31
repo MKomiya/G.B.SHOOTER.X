@@ -220,10 +220,6 @@ bool HelloWorld::init()
     player->setPosition( ccp(size.width/2, size.height/2) );
     this->addChild(player, 0);
     
-    this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
-    this->schedule(schedule_selector(HelloWorld::playerLogic), 0.2);
-    this->schedule(schedule_selector(HelloWorld::collision));
-    
     targetArray = CCArray::create();
     bulletArray = CCArray::create();
     targetArray->retain();
@@ -232,6 +228,15 @@ bool HelloWorld::init()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game1.mp3", true);
     
     return true;
+}
+
+void HelloWorld::onEnterTransitionDidFinish()
+{
+    CCLayer::onEnterTransitionDidFinish();
+    
+    this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
+    this->schedule(schedule_selector(HelloWorld::playerLogic), 0.2);
+    this->schedule(schedule_selector(HelloWorld::collision));
 }
 
 void HelloWorld::buttonCallback(CCNode* pSender)

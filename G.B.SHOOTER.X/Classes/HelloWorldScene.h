@@ -8,6 +8,7 @@ class HelloWorld : public cocos2d::CCLayer
 public:
     // 初期化処理
     virtual bool init();
+    virtual void onEnterTransitionDidFinish();
 
     // CCSceneインスタンスを外部へ渡す
     static cocos2d::CCScene* scene(bool endlessmode=false);

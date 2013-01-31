@@ -50,10 +50,16 @@ bool TitleScene::init()
 
 void TitleScene::goNextScene()
 {
-    CCDirector::sharedDirector()->replaceScene(HelloWorld::scene());
+    CCScene* pScene = HelloWorld::scene();
+    CCDirector::sharedDirector()->setDepthTest(true);
+    CCTransitionCrossFade* fade = CCTransitionCrossFade::create(1.0f, pScene);
+    CCDirector::sharedDirector()->replaceScene(fade);
 }
 
 void TitleScene::goNextEndlessModeScene()
 {
-    CCDirector::sharedDirector()->replaceScene(HelloWorld::scene(true));
+    CCScene* pScene = HelloWorld::scene(true);
+    CCDirector::sharedDirector()->setDepthTest(true);
+    CCTransitionCrossFade* fade = CCTransitionCrossFade::create(1.0f, pScene);
+    CCDirector::sharedDirector()->replaceScene(fade);
 }
