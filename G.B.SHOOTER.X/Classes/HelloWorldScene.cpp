@@ -8,13 +8,21 @@ using namespace CocosDenshion;
 CCScene* HelloWorld::scene(bool endressmode)
 {
     CCScene *scene = CCScene::create();
-    
     HelloWorld *layer = HelloWorld::create();
+
     layer->isEndless = endressmode;
-
+    
     scene->addChild(layer);
-
     return scene;
+}
+
+void HelloWorld::onEnterTransitionDidFinish()
+{
+    CCLayer::onEnterTransitionDidFinish();
+    
+    this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
+    this->schedule(schedule_selector(HelloWorld::playerLogic), 0.2);
+    this->schedule(schedule_selector(HelloWorld::collision));
 }
 
 void HelloWorld::gameLogic(float dt)
@@ -61,9 +69,9 @@ void HelloWorld::spriteMoveFinished(CCNode* sender)
 
 void HelloWorld::addTarget()
 {
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     CCSprite* target = CCSprite::create("enemy.png");
     
-    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     int minY = target->getContentSize().height/2;
     int maxY = winSize.height - minY;
     int rangeY = maxY - minY;
@@ -71,8 +79,8 @@ void HelloWorld::addTarget()
     
     target->setPosition(ccp(winSize.width + (target->getContentSize().width/2), actualY));
     target->setTag(1);
-    targetArray->addObject(target);
     this->addChild(target);
+    targetArray->addObject(target);
     
     int minDuration =2.0;
     int maxDuration =4.0;
@@ -206,11 +214,15 @@ bool HelloWorld::init()
     prevPoint.setPoint(0.0f, 0.0f);
 
     CCLabelBMFont* pBMFont = CCLabelBMFont::create("power shot", "TextImageFont.fnt");
-    pBMFont->setScale(0.5f);
     CCMenuItemLabel* chargeItem = CCMenuItemLabel::create(pBMFont, this, menu_selector(HelloWorld::buttonCallback));
+    CCLabelBMFont* pBMFontTime = CCLabelBMFont::create("stop time", "TextImageFont.fnt");
+    CCMenuItemLabel* stopItem = CCMenuItemLabel::create(pBMFontTime, this, menu_selector(HelloWorld::setStopTime));
+    CCMenu* pMenu = CCMenu::create(chargeItem, stopItem, NULL);
+    
+    pBMFont->setScale(0.5f);
+    pBMFontTime->setScale(0.5f);
     chargeItem->setPosition(ccp(size.width, pBMFont->getContentSize().height/2));
-
-    CCMenu* pMenu = CCMenu::create(chargeItem, NULL);
+    stopItem->setPosition(ccp(size.width - pBMFont->getContentSize().width, pBMFontTime->getContentSize().height/2));
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
@@ -228,15 +240,6 @@ bool HelloWorld::init()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game1.mp3", true);
     
     return true;
-}
-
-void HelloWorld::onEnterTransitionDidFinish()
-{
-    CCLayer::onEnterTransitionDidFinish();
-    
-    this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
-    this->schedule(schedule_selector(HelloWorld::playerLogic), 0.2);
-    this->schedule(schedule_selector(HelloWorld::collision));
 }
 
 void HelloWorld::buttonCallback(CCNode* pSender)
@@ -293,5 +296,10 @@ void HelloWorld::goNextScene()
     
     CCUserDefault::sharedUserDefault()->setIntegerForKey("score", score);
     CCDirector::sharedDirector()->replaceScene(ResultScene::scene());
+}
+
+void HelloWorld::setStopTime()
+{
+    
 }
 

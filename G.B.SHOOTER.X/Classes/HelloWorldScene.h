@@ -35,6 +35,7 @@ public:
     void spriteMoveFinished(CCNode* sender);
     void buttonCallback(CCNode* pSender);
     void goNextScene();
+    void setStopTime();
     
 private:
     cocos2d::CCSprite* player;

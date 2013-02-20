@@ -1,8 +1,8 @@
 //
 //  TitleScene.h
-//  MyProject
+//  G.B.SHOOTER.X
 //
-//  Created by S_Wyvern on 2013/01/22.
+//  Created by M.Komiya on 2013/01/22.
 //
 //
 

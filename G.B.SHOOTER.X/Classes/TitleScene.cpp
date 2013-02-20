@@ -1,8 +1,8 @@
 //
 //  TitleScene.cpp
-//  MyProject
+//  G.B.SHOOTER.X
 //
-//  Created by S_Wyvern on 2013/01/22.
+//  Created by M.Komiya on 2013/01/22.
 //
 //
 
@@ -30,19 +30,20 @@ bool TitleScene::init()
     }
     
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    CCSprite* pSprite = CCSprite::create("title.png");
-    pSprite->setPosition(ccp(winSize.width/2, winSize.height/2));
-    this->addChild(pSprite);
     
+    CCSprite* pSprite = CCSprite::create("title.png");
     CCLabelBMFont* pLabel1 = CCLabelBMFont::create("start", "TextImageFont.fnt", 32);
     CCLabelBMFont* pLabel2 = CCLabelBMFont::create("endless", "TextImageFont.fnt");
     CCMenuItemLabel* pLabelItem1 = CCMenuItemLabel::create(pLabel1, this, menu_selector(TitleScene::goNextScene));
     CCMenuItemLabel* pLabelItem2 = CCMenuItemLabel::create(pLabel2, this, menu_selector(TitleScene::goNextEndlessModeScene));
+    CCMenu* pMenu = CCMenu::create(pLabelItem1, pLabelItem2, NULL);
+    
+    pSprite->setPosition(ccp(winSize.width/2, winSize.height/2));
     pLabelItem1->setPosition(ccp(winSize.width/2, 70));
     pLabelItem2->setPosition(ccp(winSize.width/2, 30));
-    
-    CCMenu* pMenu = CCMenu::create(pLabelItem1, pLabelItem2, NULL);
     pMenu->setPosition( CCPointZero );
+    
+    this->addChild(pSprite);
     this->addChild(pMenu);
     
     return true;

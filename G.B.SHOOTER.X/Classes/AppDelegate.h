@@ -1,8 +1,8 @@
 //
-//  MyProjectAppDelegate.h
-//  MyProject
+//  G.B.SHOOTER.X AppDelegate.h
+//  G.B.SHOOTER.X
 //
-//  Created by S_Wyvern on 2013/01/20.
+//  Created by M.Komiya on 2013/01/20.
 //  Copyright __MyCompanyName__ 2013年. All rights reserved.
 //
 
