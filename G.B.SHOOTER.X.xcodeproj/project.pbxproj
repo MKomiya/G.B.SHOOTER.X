@@ -216,6 +216,9 @@
 		D0064E2316B63D0E0053F56F /* BurstParticle.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0064E2216B63D0E0053F56F /* BurstParticle.plist */; };
 		D0064E2616B6406C0053F56F /* TextImageFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = D0064E2516B6406C0053F56F /* TextImageFont.fnt */; };
 		D0064E2816B640720053F56F /* TextImageFont.png in Resources */ = {isa = PBXBuildFile; fileRef = D0064E2716B640720053F56F /* TextImageFont.png */; };
+		D011296816D52D1000DB25E1 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D011296716D52D1000DB25E1 /* back.jpg */; };
+		D011296B16D8B34D00DB25E1 /* TextImageFont2.fnt in Resources */ = {isa = PBXBuildFile; fileRef = D011296916D8B34D00DB25E1 /* TextImageFont2.fnt */; };
+		D011296C16D8B34D00DB25E1 /* TextImageFont2.png in Resources */ = {isa = PBXBuildFile; fileRef = D011296A16D8B34D00DB25E1 /* TextImageFont2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1127,6 +1130,9 @@
 		D0064E2216B63D0E0053F56F /* BurstParticle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = BurstParticle.plist; path = Resources/BurstParticle.plist; sourceTree = "<group>"; };
 		D0064E2516B6406C0053F56F /* TextImageFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TextImageFont.fnt; path = Resources/TextImageFont.fnt; sourceTree = "<group>"; };
 		D0064E2716B640720053F56F /* TextImageFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextImageFont.png; path = Resources/TextImageFont.png; sourceTree = "<group>"; };
+		D011296716D52D1000DB25E1 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = back.jpg; path = Resources/back.jpg; sourceTree = "<group>"; };
+		D011296916D8B34D00DB25E1 /* TextImageFont2.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TextImageFont2.fnt; path = Resources/TextImageFont2.fnt; sourceTree = "<group>"; };
+		D011296A16D8B34D00DB25E1 /* TextImageFont2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextImageFont2.png; path = Resources/TextImageFont2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1210,8 +1216,11 @@
 				D0064BB116AFD4BB0053F56F /* player.png */,
 				D0064BB216AFD4BB0053F56F /* title.png */,
 				D006491616AFCC1A0053F56F /* Icon-72.png */,
+				D011296916D8B34D00DB25E1 /* TextImageFont2.fnt */,
+				D011296A16D8B34D00DB25E1 /* TextImageFont2.png */,
 				D006491816AFCC1A0053F56F /* Icon-Small-50.png */,
 				D0064E0A16B00E0E0053F56F /* destroy.wav */,
+				D011296716D52D1000DB25E1 /* back.jpg */,
 				D0064E2216B63D0E0053F56F /* BurstParticle.plist */,
 				D0064E2516B6406C0053F56F /* TextImageFont.fnt */,
 				D006491A16AFCC1A0053F56F /* Icon-Small.png */,
@@ -3217,6 +3226,9 @@
 				D0064E2316B63D0E0053F56F /* BurstParticle.plist in Resources */,
 				D0064E2616B6406C0053F56F /* TextImageFont.fnt in Resources */,
 				D0064E2816B640720053F56F /* TextImageFont.png in Resources */,
+				D011296816D52D1000DB25E1 /* back.jpg in Resources */,
+				D011296B16D8B34D00DB25E1 /* TextImageFont2.fnt in Resources */,
+				D011296C16D8B34D00DB25E1 /* TextImageFont2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

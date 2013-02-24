@@ -1,3 +1,11 @@
+//
+//  HelloWorldScene.cpp
+//  G.B.SHOOTER.X
+//
+//  Created by M.Komiya on 2013/01/22.
+//
+//
+
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 #include "ResultScene.h"
@@ -20,9 +28,24 @@ void HelloWorld::onEnterTransitionDidFinish()
 {
     CCLayer::onEnterTransitionDidFinish();
     
-    this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
-    this->schedule(schedule_selector(HelloWorld::playerLogic), 0.2);
-    this->schedule(schedule_selector(HelloWorld::collision));
+    if(isPausing)
+    {
+        isPausing = false;
+        return ;
+    }
+    
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    CCLabelBMFont* ready = CCLabelBMFont::create("Ready...", "TextImageFont2.fnt");
+    CCBlink* blinkAction1 = CCBlink::create(0.3f, 2);
+    CCBlink* blinkAction2 = CCBlink::create(0.3f, 5);
+    CCBlink* blinkAction3 = CCBlink::create(0.2f, 10);
+    CCCallFuncN* changeSpriteAction = CCCallFuncN::create(this, callfuncN_selector(HelloWorld::changeReadySprite));
+    CCCallFuncN* start = CCCallFuncN::create(this, callfuncN_selector(HelloWorld::gameStart));
+    
+    ready->setPosition(ccp(winSize.width/2, winSize.height/2));
+    ready->runAction(CCSequence::create(blinkAction1, blinkAction2, blinkAction3, changeSpriteAction, CCDelayTime::create(0.3f), start, NULL));
+    
+    this->addChild(ready);
 }
 
 void HelloWorld::gameLogic(float dt)
@@ -51,11 +74,49 @@ void HelloWorld::gameLogic(float dt)
     }
 }
 
+void HelloWorld::stoppingGameLogic(float dt)
+{
+    if(stopTimer > 0) stopTimer -= 1;
+    
+    if(stopTimer == 0)
+    {
+        // フラグ解除
+        isStopping = false;
+
+        float speed = 1.0;
+        CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+        
+        // 全ての弾オブジェクトに移動属性を持たせる
+        CCObject *bulletobj, *targetobj;
+        CCARRAY_FOREACH(bulletArray, bulletobj)
+        {
+            CCSprite* bullet = (CCSprite*)bulletobj;
+            CCMoveBy* actionMove = CCMoveBy::create(speed,ccp(winSize.width, 0.0f));
+            CCCallFuncN* actionMoveDone = CCCallFuncN::create(this, callfuncN_selector(HelloWorld::spriteMoveFinished));
+            bullet->runAction(CCSequence::create(actionMove, actionMoveDone, NULL));
+            bullet->resumeSchedulerAndActions();
+        }
+        
+        // 全ての敵オブジェクトのアクションを再開する
+        CCARRAY_FOREACH(targetArray, targetobj)
+        {
+            CCSprite* target = (CCSprite*)targetobj;
+            target->resumeSchedulerAndActions();
+        }
+        
+        // スケジューラー再登録
+        this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
+        
+        // 停止中スケジューラーを解放
+        this->unschedule(schedule_selector(HelloWorld::stoppingGameLogic));
+    }
+}
+
 void HelloWorld::spriteMoveFinished(CCNode* sender)
 {
     CCSprite* sprite = (CCSprite*)sender;
     
-    if(sprite->getTag() == 1)
+    if(sprite->getTag() >= 10)
     {
         targetArray->fastRemoveObject(sprite);
     }
@@ -76,11 +137,25 @@ void HelloWorld::addTarget()
     int maxY = winSize.height - minY;
     int rangeY = maxY - minY;
     int actualY = (arc4random()% rangeY)+ minY;
+    int enemyType = arc4random() % 10;
     
     target->setPosition(ccp(winSize.width + (target->getContentSize().width/2), actualY));
-    target->setTag(1);
+    target->setTag(10);
     this->addChild(target);
     targetArray->addObject(target);
+    
+    // 10%の確率で赤色敵が出てくるようにする
+    if( enemyType == 1 )
+    {
+        target->setTag(11);
+        target->setColor(ccc3(255, 64, 64));
+    }
+    // 10%の確率で緑色敵が出てくるようにする
+    else if( enemyType == 2 )
+    {
+        target->setTag(12);
+        target->setColor(ccc3(64, 255, 64));
+    }
     
     int minDuration =2.0;
     int maxDuration =4.0;
@@ -116,9 +191,13 @@ void HelloWorld::addBullet()
     
     float speed = 1.0;
     
-    CCMoveBy* actionMove = CCMoveBy::create(speed,ccp(winSize.width, 0.0f));
-    CCCallFuncN* actionMoveDone = CCCallFuncN::create(this, callfuncN_selector(HelloWorld::spriteMoveFinished));
-    bullet->runAction(CCSequence::create(actionMove, actionMoveDone, NULL));
+    // 停止中でないなら移動アクションを持たせる
+    if(!isStopping)
+    {
+        CCMoveBy* actionMove = CCMoveBy::create(speed,ccp(winSize.width, 0.0f));
+        CCCallFuncN* actionMoveDone = CCCallFuncN::create(this, callfuncN_selector(HelloWorld::spriteMoveFinished));
+        bullet->runAction(CCSequence::create(actionMove, actionMoveDone, NULL));
+    }
 }
 
 void HelloWorld::addEffect(CCPoint startpoint)
@@ -159,8 +238,9 @@ void HelloWorld::collision(float dt)
                                            target->getContentSize().height);
             if(targetRect.intersectsRect(bulletRect))
             {
+                score += 100 * (target->getTag() == 11 ? 2 : 1);
+                gameTimer += 30 * (!isEndless && target->getTag() == 12 ? 1 : 0);
                 CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("destroy.wav");
-                score += 100;
                 addEffect(target->getPosition());
                 CCParticleSystemQuad* particle = CCParticleSystemQuad::create("BurstParticle.plist");
                 particle->setPosition(target->getPosition());
@@ -207,22 +287,30 @@ bool HelloWorld::init()
         return false;
     }
     
+    CCSprite* pBack = CCSprite::create("back.jpg");
+    pBack->setColor(ccc3(128, 128, 128));
+    this->addChild(pBack);
+    
     CCSize size = CCDirector::sharedDirector()->getWinSize();
+    this->isPausing = false;
     this->isShooting = false;
+    this->isStopping = false;
+    this->stopTimer = 0;
     this->setTouchEnabled(true);
     this->setTouchMode(kCCTouchesOneByOne);
     prevPoint.setPoint(0.0f, 0.0f);
 
-    CCLabelBMFont* pBMFont = CCLabelBMFont::create("power shot", "TextImageFont.fnt");
+    CCLabelBMFont* pBMFont = CCLabelBMFont::create("power shot", "TextImageFont2.fnt");
+    CCLabelBMFont* pBMFontTime = CCLabelBMFont::create("stop time", "TextImageFont2.fnt");
+    CCLabelBMFont* pBMPauseFont = CCLabelBMFont::create("pause", "TextImageFont2.fnt");
     CCMenuItemLabel* chargeItem = CCMenuItemLabel::create(pBMFont, this, menu_selector(HelloWorld::buttonCallback));
-    CCLabelBMFont* pBMFontTime = CCLabelBMFont::create("stop time", "TextImageFont.fnt");
     CCMenuItemLabel* stopItem = CCMenuItemLabel::create(pBMFontTime, this, menu_selector(HelloWorld::setStopTime));
-    CCMenu* pMenu = CCMenu::create(chargeItem, stopItem, NULL);
-    
-    pBMFont->setScale(0.5f);
-    pBMFontTime->setScale(0.5f);
-    chargeItem->setPosition(ccp(size.width, pBMFont->getContentSize().height/2));
-    stopItem->setPosition(ccp(size.width - pBMFont->getContentSize().width, pBMFontTime->getContentSize().height/2));
+    CCMenuItemLabel* pauseItem = CCMenuItemLabel::create(pBMPauseFont, this, menu_selector(HelloWorld::pause));
+    CCMenu* pMenu = CCMenu::create(chargeItem, stopItem, pauseItem, NULL);
+
+    chargeItem->setPosition(ccp(size.width - pBMFont->getContentSize().width/2, pBMFont->getContentSize().height/2 + 8));
+    stopItem->setPosition(ccp(chargeItem->getPositionX() - pBMFont->getContentSize().width, chargeItem->getPositionY()));
+    pauseItem->setPosition(ccp(size.width - pBMPauseFont->getContentSize().width, size.height - pBMPauseFont->getContentSize().height));
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
@@ -236,8 +324,6 @@ bool HelloWorld::init()
     bulletArray = CCArray::create();
     targetArray->retain();
     bulletArray->retain();
-    
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game1.mp3", true);
     
     return true;
 }
@@ -300,6 +386,87 @@ void HelloWorld::goNextScene()
 
 void HelloWorld::setStopTime()
 {
+    // 停止フラグを立てる
+    this->isStopping = true;
+    this->stopTimer = 10;
     
+    // 敵が出てこないようにする
+    this->unschedule(schedule_selector(HelloWorld::gameLogic));
+    
+    // 次に、現在画面内にあるオブジェクトのアクションを止める
+    CCObject *bulletobj, *targetobj;
+    CCARRAY_FOREACH(bulletArray, bulletobj)
+    {
+        CCSprite* bullet = (CCSprite*)bulletobj;
+        bullet->pauseSchedulerAndActions();
+    }
+    CCARRAY_FOREACH(targetArray, targetobj)
+    {
+        CCSprite* target = (CCSprite*)targetobj;
+        target->pauseSchedulerAndActions();
+    }
+    
+    // 時間停止中のスケジューラー登録
+    this->schedule(schedule_selector(HelloWorld::stoppingGameLogic), 0.1f);
 }
 
+void HelloWorld::pause()
+{
+    isPausing = true;
+    CCDirector::sharedDirector()->pushScene(PauseScene::scene());
+}
+
+void HelloWorld::changeReadySprite(CCNode* pSender)
+{
+    CCLabelBMFont* label = (CCLabelBMFont*)pSender;
+    label->setString("Go!");
+}
+
+void HelloWorld::gameStart(CCNode* pSender)
+{
+    CCLabelBMFont* label = (CCLabelBMFont*)pSender;
+    this->removeChild(label, true);
+    
+    this->schedule(schedule_selector(HelloWorld::gameLogic), 0.1);
+    this->schedule(schedule_selector(HelloWorld::playerLogic), 0.1);
+    this->schedule(schedule_selector(HelloWorld::collision));
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game1.mp3", true);
+}
+
+CCScene* PauseScene::scene()
+{
+    CCScene *scene = CCScene::create();
+    PauseScene *layer = PauseScene::create();
+    
+    scene->addChild(layer);
+    return scene;
+}
+
+bool PauseScene::init()
+{
+    if( !CCLayer::init() )
+    {
+        return false;
+    }
+    
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    
+    CCLabelBMFont* pBMFont = CCLabelBMFont::create("Pause Mode", "TextImageFont2.fnt");
+    CCLabelBMFont* pBMBack = CCLabelBMFont::create("back to game", "TextImageFont2.fnt");
+    CCMenuItemLabel* backItem = CCMenuItemLabel::create(pBMBack, this, menu_selector(PauseScene::backToGame));
+    CCMenu* menu = CCMenu::create(backItem, NULL);
+    pBMFont->setScale(1.5f);
+    pBMFont->setPosition(ccp(winSize.width/2, winSize.height/2));
+    backItem->setPosition(ccp(winSize.width/2, winSize.height/2 - pBMFont->getContentSize().height - pBMBack->getContentSize().height));
+    menu->setPosition( CCPointZero );
+    this->addChild(pBMFont);
+    this->addChild(menu);
+    
+    return true;
+}
+
+void PauseScene::backToGame()
+{
+    CCDirector::sharedDirector()->popScene();
+}

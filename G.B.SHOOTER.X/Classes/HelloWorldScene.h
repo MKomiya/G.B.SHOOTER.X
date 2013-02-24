@@ -1,3 +1,11 @@
+//
+//  HelloWorldScene.h
+//  G.B.SHOOTER.X
+//
+//  Created by M.Komiya on 2013/01/22.
+//
+//
+
 #ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
 
@@ -30,23 +38,47 @@ public:
     void gameLogic(float dt);
     void playerLogic(float dt);
     void collision(float dt);
+    // 時間停止中のゲームスケジューリング
+    void stoppingGameLogic(float dt);
     
-    // 各コールバックメソッド
+    /// 各コールバックメソッド
+    // スプライトオブジェクトが死んだときの処理
     void spriteMoveFinished(CCNode* sender);
+    // ボタンが押された場合の処理
     void buttonCallback(CCNode* pSender);
+    // ゲームが終わって次のシーンへ行くとき
     void goNextScene();
+    // 時間停止の処理
     void setStopTime();
+    // ポーズ画面
+    void pause();
+    // ReadyからGoへスプライトを変化させる
+    void changeReadySprite(CCNode* pSender);
+    // ゲームスタート
+    void gameStart(CCNode* pSender);
     
 private:
     cocos2d::CCSprite* player;
     cocos2d::CCPoint prevPoint;
-    bool isShooting, isCharging, isEndless;
-    cocos2d::CCArray* targetArray;
-    cocos2d::CCArray* bulletArray;
-    int score, gameTimer;
+    bool isShooting, isCharging, isEndless, isPausing, isStopping;
+    cocos2d::CCArray *targetArray, *bulletArray;
+    int score, gameTimer, stopTimer;
     cocos2d::CCLabelTTF* scoreLabel, *timerLabel;
     
     void _initScore();
+};
+
+// ポーズ画面用の簡易シーンクラス
+class PauseScene : public cocos2d::CCLayer
+{
+public:
+    virtual bool init();
+    
+    static cocos2d::CCScene* scene();
+    
+    CREATE_FUNC(PauseScene);
+    
+    void backToGame();
 };
 
 #endif // __HELLOWORLD_SCENE_H__
