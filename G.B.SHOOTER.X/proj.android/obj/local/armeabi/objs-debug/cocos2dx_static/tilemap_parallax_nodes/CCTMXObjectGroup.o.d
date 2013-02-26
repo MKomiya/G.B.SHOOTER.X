@@ -7,6 +7,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/tilemap_parallax_nodes/CCTMXObjectG
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCString.h \
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
@@ -42,6 +43,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/tilemap_parallax_nodes/CCTMXObjectG
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h:
 

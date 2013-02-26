@@ -7,6 +7,7 @@ obj/local/armeabi/objs-debug/cocos_extension_static/GUI/CCControlExtension/CCInv
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/extensions/ExtensionMacros.h
 
 /Users/S_Wyvern/Projects/cocos2d-x/extensions/GUI/CCControlExtension/CCInvocation.h:
@@ -22,5 +23,7 @@ obj/local/armeabi/objs-debug/cocos_extension_static/GUI/CCControlExtension/CCInv
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/extensions/ExtensionMacros.h:

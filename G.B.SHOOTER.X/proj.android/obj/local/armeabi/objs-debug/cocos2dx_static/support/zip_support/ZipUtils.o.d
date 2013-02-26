@@ -25,6 +25,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/support/zip_support/ZipUtils.o: \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/sysmacros.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/memory.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/zip_support/ZipUtils.h \
+ /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccMacros.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformMacros.h \
@@ -32,25 +33,13 @@ obj/local/armeabi/objs-debug/cocos2dx_static/support/zip_support/ZipUtils.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCStdC.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformMacros.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/math.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/limits.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/limits.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/linux/limits.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/machine/internal_types.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/machine/limits.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/syslimits.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/asm/page.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/stdio.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/time.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/time.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/linux/time.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/asm/siginfo.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/asm-generic/siginfo.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCFileUtils.h \
- /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
+ /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccTypes.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCGeometry.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h \
@@ -58,7 +47,12 @@ obj/local/armeabi/objs-debug/cocos2dx_static/support/zip_support/ZipUtils.o: \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/GLES2/gl2platform.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/KHR/khrplatform.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/GLES2/gl2.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/GLES2/gl2ext.h
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccTypeInfo.h \
+ /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/typeinfo \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/zip_support/unzip.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/zip_support/ioapi.h \
+ /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/map
 
 /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/zlib.h:
 
@@ -110,6 +104,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/support/zip_support/ZipUtils.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/zip_support/ZipUtils.h:
 
+/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/string:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccMacros.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h:
@@ -124,43 +120,19 @@ obj/local/armeabi/objs-debug/cocos2dx_static/support/zip_support/ZipUtils.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
 
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCStdC.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformMacros.h:
 
 /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/math.h:
 
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/limits.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/limits.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/linux/limits.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/machine/internal_types.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/machine/limits.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/syslimits.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/asm/page.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/stdio.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/time.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/time.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/linux/time.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/asm/siginfo.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/asm-generic/siginfo.h:
-
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCFileUtils.h:
 
-/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/string:
+/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccTypes.h:
 
@@ -177,3 +149,13 @@ obj/local/armeabi/objs-debug/cocos2dx_static/support/zip_support/ZipUtils.o: \
 /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/GLES2/gl2.h:
 
 /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/GLES2/gl2ext.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccTypeInfo.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/typeinfo:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/zip_support/unzip.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/zip_support/ioapi.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/map:

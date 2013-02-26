@@ -14,6 +14,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/shaders/ccShaders.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_Position_uColor_frag.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_Position_uColor_vert.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionColor_frag.h \
@@ -27,7 +28,9 @@ obj/local/armeabi/objs-debug/cocos2dx_static/shaders/ccShaders.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionTextureColorAlphaTest_frag.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionTexture_uColor_frag.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionTexture_uColor_vert.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShaderEx_SwitchMask_frag.h
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShaderEx_SwitchMask_frag.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionColorLengthTexture_frag.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionColorLengthTexture_vert.h
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShaders.h:
 
@@ -57,6 +60,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/shaders/ccShaders.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
 
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_Position_uColor_frag.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_Position_uColor_vert.h:
@@ -84,3 +89,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/shaders/ccShaders.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionTexture_uColor_vert.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShaderEx_SwitchMask_frag.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionColorLengthTexture_frag.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/ccShader_PositionColorLengthTexture_vert.h:

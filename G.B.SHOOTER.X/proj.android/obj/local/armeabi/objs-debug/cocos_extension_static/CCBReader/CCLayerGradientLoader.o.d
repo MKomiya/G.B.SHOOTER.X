@@ -10,6 +10,7 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/extensions/ExtensionMacros.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/cocos2d.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccConfig.h \
@@ -80,6 +81,9 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/aabb.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/ray2.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCSet.h \
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/set \
@@ -121,9 +125,14 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/base_nodes/CCNode.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCAutoreleasePool.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCInteger.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCFloat.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCDouble.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCBool.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCString.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCNS.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCZone.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/draw_nodes/CCDrawingPrimitives.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/draw_nodes/CCDrawNode.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/effects/CCGrabber.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCConfiguration.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h \
@@ -155,8 +164,6 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/iostream \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/layers_scenes_transitions_nodes/CCLayer.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouchDelegateProtocol.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/layers_scenes_transitions_nodes/CCScene.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/layers_scenes_transitions_nodes/CCTransition.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/layers_scenes_transitions_nodes/CCScene.h \
@@ -166,6 +173,7 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/menu_nodes/CCMenu.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/menu_nodes/CCMenuItem.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/menu_nodes/CCMenuItem.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/misc_nodes/CCClippingNode.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/misc_nodes/CCMotionStreak.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/misc_nodes/CCProgressTimer.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/misc_nodes/CCRenderTexture.h \
@@ -215,10 +223,10 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouchDelegateProtocol.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouchHandler.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouchDispatcher.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCDrawingPrimitives.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCScheduler.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/data_support/uthash.h \
- /Users/S_Wyvern/Projects/cocos2d-x/extensions/CCBReader/CCBReader.h
+ /Users/S_Wyvern/Projects/cocos2d-x/extensions/CCBReader/CCBReader.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/extensions/CCBReader/CCBValue.h
 
 /Users/S_Wyvern/Projects/cocos2d-x/extensions/CCBReader/CCLayerGradientLoader.h:
 
@@ -239,6 +247,8 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/extensions/ExtensionMacros.h:
 
@@ -380,6 +390,12 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h:
 
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCSet.h:
@@ -462,11 +478,21 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCInteger.h:
 
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCFloat.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCDouble.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCBool.h:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCString.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCNS.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCZone.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/draw_nodes/CCDrawingPrimitives.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/draw_nodes/CCDrawNode.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/effects/CCGrabber.h:
 
@@ -530,10 +556,6 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouchDelegateProtocol.h:
 
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h:
-
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h:
-
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/layers_scenes_transitions_nodes/CCScene.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/layers_scenes_transitions_nodes/CCTransition.h:
@@ -551,6 +573,8 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/menu_nodes/CCMenuItem.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/menu_nodes/CCMenuItem.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/misc_nodes/CCClippingNode.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/misc_nodes/CCMotionStreak.h:
 
@@ -650,10 +674,10 @@ obj/local/armeabi/objs-debug/cocos_extension_static/CCBReader/CCLayerGradientLoa
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouchDispatcher.h:
 
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCDrawingPrimitives.h:
-
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCScheduler.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/data_support/uthash.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/extensions/CCBReader/CCBReader.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/extensions/CCBReader/CCBValue.h:

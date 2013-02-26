@@ -28,6 +28,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/kazmath/src/mat4.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/math.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/limits.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/limits.h \
@@ -99,6 +100,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/kazmath/src/mat4.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/math.h:
 

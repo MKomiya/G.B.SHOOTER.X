@@ -10,6 +10,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCStdC.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformMacros.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/math.h \
@@ -73,6 +74,9 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/aabb.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/ray2.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCGeometry.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCSet.h \
@@ -86,8 +90,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccTypes.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/textures/CCTextureAtlas.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/CCPointExtension.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCDrawingPrimitives.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCGeometry.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/draw_nodes/CCDrawingPrimitives.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/CCShaderCache.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCDictionary.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/data_support/uthash.h \
@@ -97,6 +100,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCDirector.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformMacros.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCGeometry.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCArray.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/mat4.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/label_nodes/CCLabelTTF.h \
@@ -107,6 +111,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/TransformUtils.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCInteger.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCFileUtils.h \
+ /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/GL/matrix.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/GL/../mat4.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/GL/../vec3.h
@@ -130,6 +135,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCStdC.h:
 
@@ -257,6 +264,12 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h:
 
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCGeometry.h:
@@ -283,9 +296,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/CCPointExtension.h:
 
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCDrawingPrimitives.h:
-
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCGeometry.h:
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/draw_nodes/CCDrawingPrimitives.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/shaders/CCShaderCache.h:
 
@@ -304,6 +315,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformMacros.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCGeometry.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCArray.h:
 
@@ -324,6 +337,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/label_nodes/CCLabelAtlas.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCInteger.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCFileUtils.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/GL/matrix.h:
 

@@ -44,8 +44,6 @@ public:
     /// 各コールバックメソッド
     // スプライトオブジェクトが死んだときの処理
     void spriteMoveFinished(CCNode* sender);
-    // ボタンが押された場合の処理
-    void buttonCallback(CCNode* pSender);
     // ゲームが終わって次のシーンへ行くとき
     void goNextScene();
     // 時間停止の処理
@@ -63,7 +61,7 @@ private:
     bool isShooting, isCharging, isEndless, isPausing, isStopping;
     cocos2d::CCArray *targetArray, *bulletArray;
     int score, gameTimer, stopTimer;
-    cocos2d::CCLabelTTF* scoreLabel, *timerLabel;
+    cocos2d::CCLabelBMFont* scoreLabel, *timerLabel;
     
     void _initScore();
 };
@@ -79,6 +77,7 @@ public:
     CREATE_FUNC(PauseScene);
     
     void backToGame();
+    void returnToTitle();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

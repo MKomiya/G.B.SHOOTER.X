@@ -6,6 +6,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformMacros.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccTypes.h \
@@ -81,6 +82,9 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/aabb.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/ray2.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCSet.h \
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/set \
@@ -115,15 +119,14 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCAutoreleasePool.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/platform.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCThread.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCFileUtils.h \
+ /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCApplication.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCApplicationProtocol.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/label_nodes/CCLabelBMFont.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/sprite_nodes/CCSpriteBatchNode.h \
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/sstream \
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/iostream \
- /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/label_nodes/CCLabelAtlas.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/base_nodes/CCAtlasNode.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/base_nodes/CCNode.h \
@@ -132,8 +135,6 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/CCConfiguration.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/keypad_dispatcher/CCKeypadDispatcher.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/keypad_dispatcher/CCKeypadDelegate.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/sprite_nodes/CCAnimationCache.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/support/CCUserDefault.h \
@@ -158,6 +159,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h:
 
@@ -309,6 +312,12 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h:
 
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCSet.h:
@@ -377,9 +386,9 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCThread.h:
 
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h:
-
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCFileUtils.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCApplication.h:
 
@@ -392,8 +401,6 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
 /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/sstream:
 
 /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/iostream:
-
-/Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/vector:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/label_nodes/CCLabelAtlas.h:
 
@@ -410,10 +417,6 @@ obj/local/armeabi/objs-debug/cocos2dx_static/CCDirector.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/keypad_dispatcher/CCKeypadDispatcher.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/keypad_dispatcher/CCKeypadDelegate.h:
-
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h:
-
-/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/sprite_nodes/CCAnimationCache.h:
 

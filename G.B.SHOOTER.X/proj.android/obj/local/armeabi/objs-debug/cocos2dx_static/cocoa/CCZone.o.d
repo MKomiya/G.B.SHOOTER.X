@@ -6,6 +6,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/cocoa/CCZone.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/stdio.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/cdefs.h \
  /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -35,6 +36,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/cocoa/CCZone.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/stdio.h:
 

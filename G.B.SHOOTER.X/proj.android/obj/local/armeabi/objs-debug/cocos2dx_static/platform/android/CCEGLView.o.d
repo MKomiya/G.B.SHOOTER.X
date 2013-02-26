@@ -7,6 +7,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/platform/android/CCEGLView.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h \
+ /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCEGLViewProtocol.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/include/ccTypes.h \
@@ -85,6 +86,9 @@ obj/local/armeabi/objs-debug/cocos2dx_static/platform/android/CCEGLView.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/aabb.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/kazmath/include/kazmath/ray2.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h \
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h \
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/map \
  /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/string \
@@ -104,8 +108,7 @@ obj/local/armeabi/objs-debug/cocos2dx_static/platform/android/CCEGLView.o: \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouchDelegateProtocol.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/jni/IMEJni.h \
  /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.h \
- /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCGL.h \
- /Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h
+ /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCGL.h
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCEGLView.h:
 
@@ -120,6 +123,8 @@ obj/local/armeabi/objs-debug/cocos2dx_static/platform/android/CCEGLView.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCPlatformDefine.h:
+
+/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/cocoa/CCObject.h:
 
@@ -277,6 +282,12 @@ obj/local/armeabi/objs-debug/cocos2dx_static/platform/android/CCEGLView.o: \
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/script_support/CCScriptSupport.h:
 
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCAccelerometer.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCAccelerometerDelegate.h:
+
+/Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/CCCommon.h:
+
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/touch_dispatcher/CCTouch.h:
 
 /Users/S_Wyvern/Development/AndroidNDK/sources/cxx-stl/gnu-libstdc++/4.6/include/map:
@@ -316,5 +327,3 @@ obj/local/armeabi/objs-debug/cocos2dx_static/platform/android/CCEGLView.o: \
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.h:
 
 /Users/S_Wyvern/Projects/cocos2d-x/cocos2dx/platform/android/CCGL.h:
-
-/Users/S_Wyvern/Development/AndroidNDK/platforms/android-14/arch-arm/usr/include/android/log.h:
