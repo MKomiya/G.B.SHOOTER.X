@@ -378,6 +378,7 @@ void HelloWorld::goNextScene()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->end();
     
     CCUserDefault::sharedUserDefault()->setIntegerForKey("score", score);
+    CCUserDefault::sharedUserDefault()->flush();
     CCDirector::sharedDirector()->replaceScene(ResultScene::scene());
 }
 
