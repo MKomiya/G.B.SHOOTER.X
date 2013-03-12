@@ -33,7 +33,7 @@ bool ResultScene::init()
     this->setTouchEnabled(true);
     this->setTouchMode(kCCTouchesOneByOne);
     
-    int resultScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("score");
+    int resultScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("score", 0);
     CCString* string = CCString::createWithFormat("ResultScore:%d", resultScore);
     CCLabelBMFont* pLabel = CCLabelBMFont::create(string->getCString(), "TextImageFont.fnt");
     

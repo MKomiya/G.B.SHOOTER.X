@@ -23,6 +23,7 @@ AppDelegate::AppDelegate()
 
 AppDelegate::~AppDelegate()
 {
+    CCUserDefault::purgeSharedUserDefault();
 }
 
 bool AppDelegate::applicationDidFinishLaunching()
