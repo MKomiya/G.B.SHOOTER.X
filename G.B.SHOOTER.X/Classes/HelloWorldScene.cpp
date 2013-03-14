@@ -377,8 +377,7 @@ void HelloWorld::goNextScene()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
     CocosDenshion::SimpleAudioEngine::sharedEngine()->end();
     
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("score", score);
-    CCDirector::sharedDirector()->replaceScene(ResultScene::scene());
+    CCDirector::sharedDirector()->replaceScene(ResultScene::scene(score));
 }
 
 void HelloWorld::setStopTime()

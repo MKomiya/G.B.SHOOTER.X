@@ -11,10 +11,11 @@
 
 using namespace cocos2d;
 
-CCScene* ResultScene::scene()
+CCScene* ResultScene::scene(int score)
 {
     CCScene* scene = CCScene::create();
     ResultScene* layer = ResultScene::create();
+    layer->setScore(score);
     
     scene->addChild(layer);
     
@@ -33,9 +34,8 @@ bool ResultScene::init()
     this->setTouchEnabled(true);
     this->setTouchMode(kCCTouchesOneByOne);
     
-    int resultScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("score", 0);
-    CCString* string = CCString::createWithFormat("ResultScore:%d", resultScore);
-    CCLabelBMFont* pLabel = CCLabelBMFont::create(string->getCString(), "TextImageFont.fnt");
+    string = CCString::createWithFormat("ResultScore:%d", resultScore);
+    pLabel = CCLabelBMFont::create(string->getCString(), "TextImageFont.fnt");
     
     pLabel->setScale(0.6f);
     pLabel->setPosition(ccp(winSize.width/2, winSize.height/2));
@@ -58,4 +58,11 @@ bool ResultScene::ccTouchBegan(CCTouch* pTouch, CCEvent* pEvent)
 void ResultScene::ccTouchEnded(CCTouch* pTouch, CCEvent* pEvent)
 {
     goNextScene();
+}
+
+void ResultScene::setScore(int score)
+{
+    resultScore = score;
+    string->initWithFormat("ResultScore:%d", resultScore);
+    pLabel->setString(string->getCString());
 }
